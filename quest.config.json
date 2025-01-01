@@ -1,44 +1,119 @@
 {
     "metadata": {
         "owner": "polearn",
-        "name": "pol-template",
-        "chain": "656476",
-        "title": "Deploy Your First Smart Contract on Open Campus",
-        "description": "This course guides you through deploying your first smart contract on Open Campus. It also serves as a template for creating engaging and user-friendly courses on Proof of Learn.",
-        "image": "https://raw.githubusercontent.com/POLearn/pol-template/refs/heads/master/content/assets/cover.png"
+        "name": "smart-contracts-on-rootstock",
+        "title": "Exploring Rootstock (RSK) and create BTC Runes on RSK",
+        "description": "Dive into insightful guide to the available smart contracts on Rootstock. This documentation provides a clear, concise overview of each contract's functionality, empowering developers and enthusiasts to harness their potential. Highlighting the unique advantages these contracts bring to the Rootstock and Bitcoin ecosystems",
+        "image": "https://raw.githubusercontent.com/POLearn/smart-contracts-on-rootstock/refs/heads/master/content/assets/cover.png"
     },
     "quests": [
         {
-            "path": "01_deploy_your_first_token/05_deploy",
+            "path": "01_deploy_your_first_token/03_runes_contract",
             "type": "deployment",
-            "bytecode": "0xa891761af84e22afaeaa82cf4cd09a7fa0eb2f88107861e42d055cb403bfb3fc"
+            "chain": "31",
+            "bytecode": "0xd3f20ca28e6c455ec33c273e1fa3d863dff80c5b46be5d146e9b4eb13eecb9ef"
         },
         {
-            "path": "01_deploy_your_first_token/06_set",
+            "path": "03_create_btc_runes_on_rsk/04_mint_fungible",
+            "description": "Minting a Fungible Token on Rootstocks Rune Token contract",
             "type": "transaction",
-            "args": [
-                "Vitalik"
-            ],
+            "chain": "31",
             "abi": [
                 {
                     "inputs": [
                         {
                             "internalType": "string",
-                            "name": "_name",
+                            "name": "tokenURI",
                             "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "runeName",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "symbol",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "maxSupply",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "initialSupply",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "uint256",
+                            "name": "defaultMintAmount",
+                            "type": "uint256"
+                        },
+                        {
+                            "internalType": "address",
+                            "name": "receiver",
+                            "type": "address"
                         }
                     ],
-                    "name": "set",
+                    "name": "mintFungible",
                     "outputs": [],
                     "stateMutability": "nonpayable",
                     "type": "function"
                 }
+            ],
+            "args": [
+                "0x",
+                "POLNFTRune",
+                "POR",
+                "100",
+                "0",
+                "1",
+                "0xA327f039b95703fa84D507e7338FB680D2BEf447"
             ]
         },
         {
-            "path": "02_tokens_using_openzeppelin",
-            "type": "deployment",
-            "bytecode": "0xc256a39b34c66c9dd356af7ac12af8f7b7756ee5f117f3e5a0d904222d3afa6f"
-        }
+            "path": "03_create_btc_runes_on_rsk/05_mint_non_fungible",
+            "description": "Minting a Non Fungible Token on Rootstocks Rune Token contract",
+            "type": "transaction",
+            "chain": "31",
+            "abi": [
+                  {
+                  "inputs": [
+                      {
+                          "internalType": "string",
+                          "name": "tokenURI",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "runeName",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "string",
+                          "name": "symbol",
+                          "type": "string"
+                      },
+                      {
+                          "internalType": "address",
+                          "name": "receiver",
+                          "type": "address"
+                      }
+                  ],
+                  "name": "mintNonFungible",
+                  "outputs": [],
+                  "stateMutability": "nonpayable",
+                  "type": "function"
+              }
+            ],
+            "args": [
+              "0x",
+              "POLNFTRune",
+              "PON",
+              "0xA327f039b95703fa84D507e7338FB680D2BEf447"
+            ]
+          }
     ]
 }

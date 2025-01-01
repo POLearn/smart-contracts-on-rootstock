@@ -1,0 +1,3 @@
+# Exploring RSK Smart contracts
+
+Rootstock offers a dynamic ecosystem that supports a variety of smart contracts, tokens, and stablecoins designed to enhance the Bitcoin network. Notable examples include the Wrapped Bitcoin (WBTC) and the USDRIF stablecoin contracts, which integrate with Rootstock to bring Bitcoin’s liquidity to the platform while providing a stable value asset for users. These contracts enable decentralized applications (dApps) to interact seamlessly with Bitcoin’s security and offer stable, usable assets in the DeFi space. By leveraging the Ethereum-compatible smart contract functionality of Rootstock, developers can create a wide array of financial products and services built on Bitcoin's robust blockchain infrastructure.
